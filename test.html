@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+      .campaign {
+        display: flex;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+        gap: 30px;
+        font-family: "PT Sans", sans-serif;
+      }
+
+      .campItems {
+        width: 100%;
+      }
+
+      .campItems img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .campRightSide {
+        align-self: flex-end;
+      }
+
+      .campContent {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+        line-height: 22px;
+        padding: 15px 0;
+        cursor: pointer;
+      }
+
+      .campLeftSide h3 {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+
+      .campText {
+        max-width: 450px;
+      }
+
+      .campLink {
+        border-bottom: 1px solid;
+        width: fit-content;
+        letter-spacing: 1px;
+      }
+
+      .social {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .girdItems {
+        height: 445px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        transition: 200ms ease;
+      }
+
+      .socialItem-1 {
+        background-image: url(Assets/social-image-1.jpg);
+      }
+      .socialItem-2 {
+        background-image: url(Assets/social-image-2.jpg);
+      }
+      .socialItem-3 {
+        background-image: url(Assets/social-image-3.jpg);
+      }
+      .socialItem-4 {
+        background-image: url(Assets/social-image-4.jpg);
+      }
+
+      .socialOverlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0 0 0 / 70%);
+        opacity: 0;
+      }
+
+      .socialOverlay i {
+        color: var(secondaryColor);
+        font-size: 26px;
+      }
+
+      .socialOverlay:hover {
+        opacity: 1;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <section class="campaign">
+      <div class="campItems campLeftSide">
+        <img
+          src="Assets/camp-1.webp"
+          alt="Campaign Image Left"
+          id="campImageLeft"
+        />
+        <div class="campContent">
+          <h3>MODERN MINIMALISM</h3>
+          <div class="campText">
+            Channel a new season with our new Autumn Collection. Arriving weekly
+            online and in boutiques.
+          </div>
+          <div class="campLink">VIEW THE CAMPAIGN</div>
+        </div>
+      </div>
+
+      <div class="campItems campRightSide">
+        <img
+          src="Assets/camp-2.webp"
+          alt="Campaign Image Right"
+          id="campImageRight"
+        />
+      </div>
+    </section>
+
+
+    <script>
+      // Function to add hover effect to an image
+      function addHoverEffect(imageElement, hoverSrc, originalSrc) {
+        imageElement.addEventListener("mouseenter", () => {
+          imageElement.src = hoverSrc;
+        });
+
+        imageElement.addEventListener("mouseleave", () => {
+          imageElement.src = originalSrc;
+        });
+      }
+
+      // Get the image elements
+      const campImageLeft = document.getElementById("campImageLeft");
+      const campImageRight = document.getElementById("campImageRight");
+
+      // Add hover effects to both images
+      addHoverEffect(campImageLeft, "Assets/camp-2.webp", "Assets/camp-1.webp");
+      addHoverEffect(
+        campImageRight,
+        "Assets/camp-1.webp",
+        "Assets/camp-2.webp"
+      );
+    </script>
+  </body>
+</html>

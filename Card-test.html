@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 80vw;
+            margin: auto;
+            gap: 4px;
+        }
+
+        .item {
+            height: 420px;
+            width: 100%;
+        }
+
+        .item img,
+        .item video {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media screen and (max-width: 990px) {
+            .box {
+                grid-template-columns: 1fr 1fr;
+                width: 90vw;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            .item {
+                height: 273px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item"><img
+                src="https://www.kookai.com.au/cdn/shop/files/Wk38_InlineBanner_LateCheckout_27_c91fef81-6eb4-4896-8312-91e54d4537f1.jpg?v=1715238469&width=1600"
+                alt=""></div>
+        <div class="item"><video
+                src="https://cdn.shopify.com/videos/c/vp/fa186d71630d47b8ad89ed856e46a002/fa186d71630d47b8ad89ed856e46a002.HD-1080p-7.2Mbps-28879412.mp4"
+                autoplay muted loop></video></div>
+        <div class="item"><img
+                src="https://www.kookai.com.au/cdn/shop/files/Wk38_InlineBanner_LateCheckout_31_188a3b16-0361-4ed5-ab86-82135250a5de.jpg?v=1715238482&width=1600"
+                alt=""></div>
+        <div class="item"><img
+                src="https://www.kookai.com.au/cdn/shop/files/Wk38_InlineBanner_LateCheckout_43_fe981486-6b31-4ea7-bf02-f7b95ee0ce1d.jpg?v=1715238499&width=1600"
+                alt=""></div>
+    </div>
+</body>
+
+</html>
